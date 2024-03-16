@@ -1,6 +1,12 @@
 <?php
 include('../config/db.php');
 
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    echo '<script>window.location.href = "../login.php";</script>';
+}
+
 function updateImage($file, $targetDir = '../src/img/')
 {
     // Mendapatkan informasi file
@@ -80,8 +86,17 @@ if (isset($_POST["submit"])) {
     <div class="text-center bg-dark text-white fw-bolder fs-4 py-2">Sayyidul <span class="primary-color">Hasaniyah</span> CMS</div>
 
     <div class="mt-3 col-11 mx-auto">
-        <div>Selamat Datang</div>
-        <div class="fw-semibold">Admin</div>
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <div>Selamat Datang</div>
+                <div class="fw-semibold"><?= $_SESSION['username']; ?></div>
+            </div>
+            <div>
+                <a class="nav-link link-hover" href="../../logout.php">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </a>
+            </div>
+        </div>
         <hr>
         <div class="d-flex justify-content-between">
             <div>
@@ -104,8 +119,8 @@ if (isset($_POST["submit"])) {
                     $imagePath = "../src/img/" . $row['name'];
             ?>
                     <div class="col">
-                        <div class="col d-flex align-items-center justify-content-center position-relative">
-                            <img style="height: 200px; width: 200px;" src="<?php echo $imagePath; ?>" class="rounded img-fluid object-cover shadow" alt="<?php echo $row['name']; ?>">
+                        <div class="d-flex align-items-center position-relative">
+                            <img style="height: 200px; width: 300px;" src="<?php echo $imagePath; ?>" class="rounded img-fluid object-cover shadow" alt="<?php echo $row['name']; ?>">
                             <button class="close-btn btn btn-danger p-2 rounded-circle border shadow-sm" onclick="deleteImage(<?php echo $row['id']; ?>)">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
@@ -136,7 +151,7 @@ if (isset($_POST["submit"])) {
                         <div id="previewContainer" class="mt-3"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="cancelUpload()">BAtal</button>
+                        <button type="button" class="btn btn-secondary" onclick="cancelUpload()">Batal</button>
                         <button type="submit" class="btn btn-primary" id="uploadButton" name="submit">Buat</button>
                     </div>
                 </form>

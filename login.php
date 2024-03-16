@@ -1,3 +1,45 @@
+<?php
+include('config/db.php');
+session_start();
+
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $query = "SELECT id, username, password FROM user WHERE username = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $hashedPassword = $row['password'];
+
+        if ($password == $hashedPassword) {
+            // Login berhasil, atur session dan arahkan ke halaman yang sesuai
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
+
+                echo '<script>window.location.href = "cms/index.php";</script>';
+                exit();
+        } else {
+            $loginMessage = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                             Username atau password Anda salah.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>';
+        }
+    } else {
+        $loginMessage = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                             Username atau password Anda salah.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>';
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -14,6 +56,7 @@
     <div data-aos="fade-up" data-aos-duration="1000" class="vh-100 d-flex bg-card justify-content-center align-items-center">
         <div class="my-auto bg-white mx-auto col-11 col-md-5 col-lg-4 col-xl-3 rounded shadow border p-3 py-4">
             <div class="text-center fw-bolder fs-2 pb-2">Sayyidul <span class="primary-color">Hasaniyah</span></div>
+            <?php if (isset($loginMessage)) echo $loginMessage; ?>
             <form method="POST" action="">
                 <div class="mt-4 mb-3">
                     <label for="email" class="form-label fw-normal">Username</label>

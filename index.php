@@ -31,9 +31,16 @@
           <li class="nav-item text-center d-inline-block d-lg-none">
             <a class="nav-link" href="join.php">Gabung</a>
           </li>
+          <li class="nav-item text-center d-inline-block d-lg-none">
+            <a class="nav-link" href="login.php">Login</a>
+          </li>
         </ul>
       </div>
-      <a href="join.php" class="btn bg-primary-color d-none d-lg-block link-decoration-none">Gabung</a>
+      <div class="d-lg-flex align-items-center gap-3 d-none">
+        <a href="login.php" class="text-decoration-none primary-color d-none d-lg-block link-decoration-none d-block">Login</a>
+        <a href="join.php" class="btn bg-primary-color d-none d-lg-block link-decoration-none d-block">Gabung</a>
+      </div>
+
     </div>
   </nav>
   <!-- End OF Navbar -->
@@ -132,6 +139,28 @@
       ?>
     </div>
   </div>
+
+  <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="fs-1 fw-semibold text-center">Donasi Terkumpul</div>
+  <?php
+  // Query untuk mengambil total pemasukan
+  $queryPemasukan = "SELECT SUM(nominal) AS total_pemasukan FROM keuangan WHERE type = 'pemasukan'";
+  $resultPemasukan = mysqli_query($conn, $queryPemasukan);
+  $rowPemasukan = mysqli_fetch_assoc($resultPemasukan);
+  $totalPemasukan = $rowPemasukan['total_pemasukan'];
+
+  // Query untuk mengambil total pengeluaran
+  $queryPengeluaran = "SELECT SUM(nominal) AS total_pengeluaran FROM keuangan WHERE type = 'pengeluaran'";
+  $resultPengeluaran = mysqli_query($conn, $queryPengeluaran);
+  $rowPengeluaran = mysqli_fetch_assoc($resultPengeluaran);
+  $totalPengeluaran = $rowPengeluaran['total_pengeluaran'];
+
+  // Menghitung saldo
+  $saldo = $totalPemasukan - $totalPengeluaran;
+
+  // Mencetak saldo
+  echo '<div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style="font-size: 48px;" class="text-center fw-semibold">Rp ' . number_format($saldo, 0, ',', '.') . '</div>';
+  ?>
+
 
   <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="container py-5">
     <div class="fs-6 fw-light text-center mb-3 col-10 mx-auto mb-4">"Seorang aktivis sosial yang memiliki kepedulian mendalam terhadap anak-anak yatim di Indonesia, berdedikasi untuk meningkatkan kesejahteraan mereka melalui berbagai inisiatif dan program yang bertujuan memberikan akses yang adil terhadap pendidikan, kesehatan, dan peluang lainnya."</div>

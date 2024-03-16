@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    echo '<script>window.location.href = "../login.php";</script>';
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -14,8 +20,17 @@
     <div class="text-center bg-dark text-white fw-bolder fs-4 py-2">Sayyidul <span class="primary-color">Hasaniyah</span> CMS</div>
 
     <div class="mt-3 col-11 mx-auto">
-        <div>Selamat Datang</div>
-        <div class="fw-semibold">Admin</div>
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <div>Selamat Datang</div>
+                <div class="fw-semibold"><?= $_SESSION['username']; ?></div>
+            </div>
+            <div>
+                <a class="nav-link link-hover" href="../logout.php">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </a>
+            </div>
+        </div>
         <hr>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gy-3 g-lg-5 mt-0 justify-content-center justify-content-lg-start align-items-center text-center">
             <div class="col">
