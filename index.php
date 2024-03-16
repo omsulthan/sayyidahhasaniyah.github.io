@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>Yayasan Sayyidul Hasaniyah</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="src/css/style.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -23,20 +23,17 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Beranda</a>
+            <a class="nav-link active" href="index.php">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="program.php">Program</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tentang.php">Tentang</a>
+            <a class="nav-link" aria-current="page" href="tentang.php">Tentang</a>
           </li>
           <li class="nav-item text-center d-inline-block d-lg-none">
-            <a class="nav-link" href="tentang.php">Gabung</a>
+            <a class="nav-link" href="join.php">Gabung</a>
           </li>
         </ul>
       </div>
-      <button class="btn bg-primary-color d-none d-lg-block">Gabung</button>
+      <a href="join.php" class="btn bg-primary-color d-none d-lg-block link-decoration-none">Gabung</a>
     </div>
   </nav>
   <!-- End OF Navbar -->
@@ -61,7 +58,7 @@
       <div class="fw-bold font-goal">Kesempatan</div>
       <div class="fw-medium font-goal-subtitle">Kami berkomitmen untuk menciptakan kesempatan yang adil bagi anak-anak yatim dalam mengakses pendidikan, kesehatan, dan peluang lainnya agar mereka dapat meraih cita-cita mereka dengan penuh potensi dan harapan.</div>
       <div>
-        <a href="program.php" class="btn bg-primary-color col-4 col-lg btn-sm link-decoration-none">Lanjut</a>
+        <a href="tentang.php" class="btn bg-primary-color col-4 col-lg btn-sm link-decoration-none">Lanjut</a>
       </div>
     </div>
     <div style=" background-image: url('src/img/10.jpg');" class="col-10 col-lg-6 rounded image-goal"></div>
@@ -72,32 +69,32 @@
       <div class="fs-1 fw-semibold text-center">Misi</div>
       <div class="fs-6 fw-light text-center">Kami Berkomitmen Menciptakan</div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 g-lg-5 mt-0">
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" class="d-flex flex-column gap-2">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" class="d-flex flex-column gap-2">
           <div class="fs-3 fw-medium">Pendidikan Berkualitas</div>
           <div style="text-align: justify;" class="fs-6">Memberikan layanan pendidikan berkualitas bagi anak-anak yatim agar memiliki keterampilan dan pengetahuan yang memadai untuk mencapai cita-cita mereka.
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center" class="d-flex flex-column gap-2">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="d-flex flex-column gap-2">
           <div class="fs-3 fw-medium">Lingkungan Sejahtera</div>
           <div style="text-align: justify;" class="fs-6">Menyediakan lingkungan yang aman dan nyaman bagi anak-anak yatim untuk tumbuh dan berkembang secara fisik, emosional, dan sosial
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center" class="d-flex flex-column gap-2">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="d-flex flex-column gap-2">
           <div class="fs-3 fw-medium">Kesehatan Terjamin</div>
           <div style="text-align: justify;" class="fs-6"> Memberikan bantuan kesehatan dan akses terhadap layanan medis yang diperlukan untuk menjaga kesehatan dan kesejahteraan anak-anak yatim.
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center" class="d-flex flex-column gap-2">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="d-flex flex-column gap-2">
           <div class="fs-3 fw-medium">Fasilitas Memadai</div>
           <div style="text-align: justify;" class="fs-6">Memfasilitasi pembinaan karakter dan nilai-nilai moral serta agama bagi anak-anak yatim untuk membentuk kepribadian yang baik dan bertanggung jawab.
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center" class="d-flex flex-column gap-2">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="d-flex flex-column gap-2">
           <div class="fs-3 fw-medium">Hubungan Baik</div>
           <div style="text-align: justify;" class="fs-6">Berkolaborasi dengan berbagai pihak, termasuk pemerintah, lembaga swadaya masyarakat, dan masyarakat umum, untuk meningkatkan dukungan dan akses bagi anak-anak yatim.
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center" class="d-flex flex-column gap-2">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="d-flex flex-column gap-2">
           <div class="fs-3 fw-medium">Penggalangan Dana</div>
           <div style="text-align: justify;" class="fs-6">Menggalang sumber daya dan dukungan finansial untuk mendukung program-program yayasan dan meningkatkan dampak positifnya terhadap kehidupan anak-anak yatim.
           </div>
@@ -109,33 +106,30 @@
   <div class="container py-5">
     <div class="fs-1 fw-semibold text-center mb-3">Galeri</div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 g-lg-5">
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/12.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/2.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/3.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/4.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/14.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/6.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/7.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/8.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-center" style=" background-image: url('src/img/9.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; height : 30vh" class="rounded"></div>
-      </div>
+      <?php
+      // Sertakan file koneksi database
+      include('config/db.php');
+
+      // Query untuk mengambil semua gambar dari tabel gallery
+      $sql = "SELECT name FROM gallery";
+      $result = mysqli_query($conn, $sql);
+
+      // Periksa apakah query berhasil dieksekusi
+      if ($result && mysqli_num_rows($result) > 0) {
+        // Iterasi melalui hasil query
+        while ($row = mysqli_fetch_assoc($result)) {
+          $imageName = $row['name'];
+      ?>
+          <div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" style="background-image: url('<?php echo "src/img/" . $imageName; ?>'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;" class="rounded"></div>
+          </div>
+      <?php
+        }
+      } else {
+        // Jika tidak ada gambar yang ditemukan dalam tabel
+        echo "Tidak ada gambar yang ditemukan";
+      }
+      ?>
     </div>
   </div>
 
@@ -152,7 +146,7 @@
       <div data-aos="fade-right" data-aos-duration="1000" class="col-12 col-lg-6 d-flex flex-column gap-2">
         <div class="fw-bold fs-1">Hubungi Kami</div>
         <div class="fs-6 fw-normal"><a target="_blank" class="link-underline primary-color link-underline-opacity-0 d-flex align-items-center gap-1" href="https://api.whatsapp.com/send?phone=6281212341305&text=Assalamualaikum%20Pak%20Hasan"><i class="fa-brands fa-whatsapp fs-3"></i>Whatsapp</a></div>
-        <div class="fs-6 fw-normal">yayasansayyinulhasaniyah@gmail.com</div>
+        <div class="fs-6 fw-normal">yayasansayyidulhasaniyah@gmail.com</div>
         <div class="fs-6 fw-normal col-10">Jl. Bintara VIII No.1b, RT.004/RW.003, Bintara, Kec. Bekasi Bar., Kota Bks, Jawa Barat 17134</div>
         <div class="d-flex gap-3 fw-normal fs-3 align-items-center">
           <div><a target="_blank" class="link-underline text-black link-underline-opacity-0 d-flex align-items-center gap-1" href="https://www.instagram.com/yayasan_sayyidul_hasaniyah/"><i class="fa-brands fa-instagram"></i></a></div>
@@ -160,7 +154,7 @@
           <div><a target="_blank" class="link-underline text-black link-underline-opacity-0 d-flex align-items-center gap-1" href="https://www.snackvideo.com/@HSN1972"><img src="src/img/snack-video.svg" width="32" alt=""></a></div>
         </div>
       </div>
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" class="col-12 col-lg-6 d-flex flex-column gap-3">
+      <!-- <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" class="col-12 col-lg-6 d-flex flex-column gap-3">
         <form>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nama Pengirim</label>
@@ -176,7 +170,7 @@
           </div>
           <button type="submit" class="btn bg-primary-color col px-5">Kirim</button>
         </form>
-      </div>
+      </div> -->
     </div>
   </div>
 
